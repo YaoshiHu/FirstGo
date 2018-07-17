@@ -1,0 +1,22 @@
+# Basic go commands
+GOCMD = go
+GOBUILD = $(GOCMD) build
+GOCLEAN = $(GOCMD) clean
+GOTEST = $(GOCMD) test
+GOGET = $(GOCMD) get
+
+# Bin Name
+CURRENT_DIR = `pwd`
+BIN_NAME ?= `basename $CURRENT_DIR`
+
+build:
+	mkdir -p bin
+	$(GOBUILD) -o bin/$(BIN_NAME) -v
+
+test:
+	$(GOTEST) -v ./...
+
+clean:
+	$(GOCLEAN)
+	rm -f bin/$(BIN_NAME)
+	

@@ -16,7 +16,7 @@ func main() {
 	*tmp3 = *result
 	result.Val = 100
 	fmt.Println("result", result.Val)
-	fmt.Println("tmp1", tmp1.Val)
-	fmt.Println("tmp2", tmp2.Val)
-	fmt.Println("tmp3", tmp3.Val)
+	fmt.Println("tmp1=*result", tmp1.Val)
+	fmt.Println("tmp2=result", tmp2.Val)
+	fmt.Println("*tmp3=*result", tmp3.Val)
 }
